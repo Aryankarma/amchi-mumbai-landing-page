@@ -1,27 +1,32 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Menu, X } from "lucide-react"
+import Image from "next/image";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { label: "Platform", href: "#platform" },
   { label: "Workflow", href: "#workflow" },
   { label: "Roles", href: "#roles" },
   { label: "Stack", href: "#stack" },
-]
+];
 
 export function Navbar() {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <a href="#" className="flex items-center gap-3">
-          <div className="flex h-8 w-8 items-center justify-center rounded-sm bg-primary">
-            <span className="text-sm font-bold text-primary-foreground font-mono">AM</span>
-          </div>
+          <Image
+            src="/alphanext-technology-solutions-logo.png"
+            alt="IFactory Logo"
+            width={32}
+            height={32}
+            className="h-8 w-8 object-contain rounded-full"
+          />
           <span className="text-lg font-bold tracking-tight text-foreground">
-            Amchi Mumbai
+            IFactory
           </span>
         </a>
 
@@ -74,5 +79,5 @@ export function Navbar() {
         </div>
       )}
     </nav>
-  )
+  );
 }

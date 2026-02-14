@@ -17,8 +17,9 @@ export function CtaSection() {
               Turn your supply chain into a competitive advantage.
             </h2>
             <p className="mt-6 text-pretty leading-relaxed text-muted-foreground">
-              Amchi Mumbai is not just an application — it is a comprehensive
-              operational operating system designed for the modern food industry.
+              IFactory is not just an application — it is a comprehensive
+              operational operating system designed for the modern food
+              industry.
             </p>
 
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -39,5 +40,5 @@ export function CtaSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -1,28 +1,31 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Shield, Warehouse, ChefHat, Package, Store } from "lucide-react"
+import { useState } from "react";
+import { Shield, Warehouse, ChefHat, Package, Store } from "lucide-react";
 
 const roles = [
   {
     id: "admin",
     icon: Shield,
     title: "Super Admin",
-    responsibility: "Platform oversight, user management, and global analytics.",
+    responsibility:
+      "Platform oversight, user management, and global analytics.",
     value: "Strategic visibility into sales trends and system health.",
   },
   {
     id: "inventory",
     icon: Warehouse,
     title: "Inventory Manager",
-    responsibility: "Raw material sourcing, vendor management, and stock auditing.",
+    responsibility:
+      "Raw material sourcing, vendor management, and stock auditing.",
     value: "Reduction in waste and automated stock reconciliation.",
   },
   {
     id: "factory",
     icon: ChefHat,
     title: "Factory / Kitchen",
-    responsibility: "Large-scale production, cooking queue management, and capacity planning.",
+    responsibility:
+      "Large-scale production, cooking queue management, and capacity planning.",
     value: "Streamlined production schedules based on actual demand.",
   },
   {
@@ -36,13 +39,14 @@ const roles = [
     id: "outlet",
     icon: Store,
     title: "Outlet Manager",
-    responsibility: "Real-time ordering, inventory requests, and delivery confirmation.",
+    responsibility:
+      "Real-time ordering, inventory requests, and delivery confirmation.",
     value: "One-tap procurement and reduced communication friction.",
   },
-]
+];
 
 export function RolesSection() {
-  const [activeRole, setActiveRole] = useState(0)
+  const [activeRole, setActiveRole] = useState(0);
 
   return (
     <section id="roles" className="py-24 md:py-32">
@@ -58,15 +62,15 @@ export function RolesSection() {
             Five distinct command centers.
           </h2>
           <p className="mt-6 text-pretty leading-relaxed text-muted-foreground">
-            Unlike generic ERP systems, Amchi Mumbai provides tailored
-            interfaces for every specific role in the food supply chain.
+            Unlike generic ERP systems, IFactory provides tailored interfaces
+            for every specific role in the food supply chain.
           </p>
         </div>
 
         {/* Role tabs — horizontal on desktop, stacked on mobile */}
         <div className="mb-10 flex flex-wrap gap-2">
           {roles.map((role, i) => {
-            const Icon = role.icon
+            const Icon = role.icon;
             return (
               <button
                 key={role.id}
@@ -80,7 +84,7 @@ export function RolesSection() {
                 <Icon size={16} />
                 {role.title}
               </button>
-            )
+            );
           })}
         </div>
 
@@ -105,5 +109,5 @@ export function RolesSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

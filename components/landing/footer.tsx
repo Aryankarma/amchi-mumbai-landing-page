@@ -1,8 +1,15 @@
+import Image from "next/image";
+
 const footerLinks = {
-  Platform: ["AI Procurement", "Production Queues", "Multi-Unit Sync", "Role Management"],
+  Platform: [
+    "AI Procurement",
+    "Production Queues",
+    "Multi-Unit Sync",
+    "Role Management",
+  ],
   Company: ["About", "Careers", "Contact", "Press"],
   Resources: ["Documentation", "API Reference", "Changelog", "Status"],
-}
+};
 
 export function Footer() {
   return (
@@ -10,13 +17,17 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-16">
         <div className="flex flex-col gap-12 md:flex-row md:justify-between">
           {/* Brand */}
-          <div className="max-w-xs">
+          <div className="max-w-sm">
             <div className="flex items-center gap-3">
-              <div className="flex h-8 w-8 items-center justify-center rounded-sm bg-primary">
-                <span className="text-sm font-bold text-primary-foreground font-mono">AM</span>
-              </div>
+              <Image
+                src="/alphanext-technology-solutions-logo.png"
+                alt="IFactory Logo"
+                width={32}
+                height={32}
+                className="h-8 w-8 object-contain rounded-full"
+              />
               <span className="text-lg font-bold tracking-tight text-foreground">
-                Amchi Mumbai
+                IFactory <span className="text-sm text-muted-foreground">- by Alphanext Technology Solutions</span>
               </span>
             </div>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
@@ -52,18 +63,24 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-border pt-8 md:flex-row md:items-center">
           <span className="text-xs text-muted-foreground">
-            {"2026 Amchi Mumbai. All rights reserved."}
+            {"2026 IFactory. All rights reserved."}
           </span>
           <div className="flex gap-6">
-            <a href="#" className="text-xs text-muted-foreground transition-colors hover:text-primary">
+            <a
+              href="#"
+              className="text-xs text-muted-foreground transition-colors hover:text-primary"
+            >
               Privacy Policy
             </a>
-            <a href="#" className="text-xs text-muted-foreground transition-colors hover:text-primary">
+            <a
+              href="#"
+              className="text-xs text-muted-foreground transition-colors hover:text-primary"
+            >
               Terms of Service
             </a>
           </div>
         </div>
       </div>
     </footer>
-  )
+  );
 }

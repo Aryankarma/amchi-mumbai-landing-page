@@ -1,5 +1,5 @@
-import { ArrowDown } from "lucide-react"
-import Image from "next/image"
+import { ArrowDown } from "lucide-react";
+import Image from "next/image";
 
 export function Hero() {
   return (
@@ -33,8 +33,8 @@ export function Hero() {
 
         {/* Subheadline */}
         <p className="mt-8 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground md:text-xl">
-          Amchi Mumbai replaces verbal orders, paper invoices, and guesswork
-          with AI-powered procurement, real-time production queues, and instant
+          IFactory replaces verbal orders, paper invoices, and guesswork with
+          AI-powered procurement, real-time production queues, and instant
           multi-unit sync.
         </p>
 
@@ -63,5 +63,5 @@ export function Hero() {
         </div>
       </div>
     </section>
-  )
+  );
 }
